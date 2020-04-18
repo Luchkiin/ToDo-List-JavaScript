@@ -1,0 +1,443 @@
+/*Font Import: Roboto*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    line-height: 1.2;
+    background-image: linear-gradient(to right, rgb(68, 160, 141), rgb(9, 54, 55));
+    color: #FCFCFC;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+header h1 {
+    font-size: 5rem;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
+header img {
+    width: 30%;
+    margin: 4em 0;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    min-height: 20vh;
+    display: grid;
+    grid-template-columns: 1.5fr auto;
+    width: 80%;
+    margin: 0 auto;
+    grid-column-gap: 2em;
+    justify-self: center;
+    align-self: center;
+}
+
+form input {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    min-width: 92.5%;
+}
+
+form input, form button {
+    padding: 1.25rem 1.5rem;
+    font-size: 2.5rem;
+    border: none;
+    background: #FCFCFC;
+}
+
+form button {
+    color: rgb(68, 160, 141);
+    background: #FCFCFC;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 1.25rem 1.5rem;
+    width: 7.5%;
+}
+
+form button:hover {
+    background: #44a08d;
+    color: #FCFCFC;
+}
+
+/*Todo Styles*/
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 33%;
+    list-style: none;
+}
+
+.todo {
+    margin: 1.5rem;
+    background: #FCFCFC;
+    color: #333333;
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    transition: all 750ms ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.todo-item {
+    padding: .75em 1.25rem;
+}
+
+.delete-button, .complete-button {
+    border: none;
+    padding: 1.5rem;
+    cursor: pointer;
+    color: #FCFCFC;
+    font-size: 1.25rem;
+}
+
+.delete-button {
+    background-color: #cc2e56;
+    padding: .5em .6em;
+    border-radius: 4px;
+    margin-right: 1em;
+}
+
+.delete-button:hover {
+    background-color: #992340;
+    transition: all 250ms ease;
+}
+
+.complete-button {
+    background-color: #44a08d;
+    padding: .5em;
+    border-radius: 4px;
+    margin-right: .75em;
+}
+
+.complete-button:hover {
+    background-color: #317466;
+    transition: all 250ms ease;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.fall {
+    transform: translateY(8rem);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.select {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+select {
+    color: #44a08d;
+    width: 20rem;
+    cursor: pointer;
+    padding: 1.55rem 1rem;
+    border-radius: 4px;
+    font-size: 1.75rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background-color: #44a08d;
+    top: 0;
+    right: 0;
+    padding: 2rem 1rem;
+    font-size: 1.5rem;
+    pointer-events: none;
+    transition: all 250ms ease;
+}
+
+.select:hover::after {
+    background-color: #317466;
+}
+
+/*MEDIA QUERIES*/
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+        form button {
+        width: 10%;
+    }
+    form input {
+        min-width: 90%;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 5rem;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+    }
+    header img {
+        width: 25%;
+        margin: 2em 0;
+    }
+    select {
+        width: 15rem;
+        padding: 1.5rem 1rem;
+        font-size: 1.5rem;
+    }
+    .select::after {
+        padding: 1.75rem 1rem;
+        font-size: 1.5rem;
+    }
+    form input {
+        min-width: 90%;
+    }
+    form button {
+        width: 10%;
+    }
+    form input, form button {
+        font-size: 2rem;
+    }
+    .todo-list {
+        min-width: 50%;
+    }
+    .todo {
+        margin: 1.5rem 0;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    header h1 {
+        font-size: 5rem;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+    }
+    header img {
+        width: 25%;
+        margin: 2em 0;
+    }
+    select {
+        width: 15rem;
+        padding: 1.5rem 1rem;
+        font-size: 1.5rem;
+    }
+    .select::after {
+        padding: 1.75rem 1rem;
+        font-size: 1.5rem;
+    }
+    form input {
+        min-width: 90%;
+    }
+    form button {
+        width: 10%;
+    }
+    form input, form button {
+        font-size: 2rem;
+    }
+    .todo-list {
+        min-width: 50%;
+    }
+    .todo {
+        margin: 1.5rem 0;
+    }
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 480px) and (max-width: 767px) {
+    header h1 {
+        font-size: 4rem;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+    }
+    header img {
+        width: 25%;
+        margin: 2em 0;
+    }
+    .todo-input-wrapper {
+        width: 100%;
+        order: 2;
+    }
+    header, form {
+        flex-direction: column;
+    }
+    form {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        justify-items: center;
+        align-items: center;
+    }
+    .select {
+        margin-bottom: 1.5rem;
+        order: 1;
+    }
+    select {
+        width: 15rem;
+        padding: 1.25rem 1rem;
+        font-size: 1.5rem;
+    }
+    .select::after {
+        padding: 1.5rem 1rem;
+        font-size: 1.5rem;
+    }
+    form input {
+        min-width: 90%;
+    }
+    form button {
+        min-width: 10%;
+    }
+    form input, form button {
+        font-size: 2rem;
+    }
+    .todo-list {
+        min-width: 100%;
+    }
+    .todo {
+        margin: 1.5rem 0;
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    header h1 {
+        font-size: 4rem;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+    }
+    header img {
+        width: 25%;
+        margin: 2em 0;
+    }
+    .todo-input-wrapper {
+        width: 100%;
+        order: 2;
+    }
+    header, form {
+        flex-direction: column;
+    }
+    form {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        justify-items: center;
+        align-items: center;
+    }
+    .select {
+        margin-bottom: 1.5rem;
+        order: 1;
+    }
+    select {
+        width: 15rem;
+        padding: 1.25rem 1rem;
+        font-size: 1.5rem;
+    }
+    .select::after {
+        padding: 1.5rem 1rem;
+        font-size: 1.5rem;
+    }
+    form input {
+        min-width: 85%;
+    }
+    form button {
+        min-width: 15%;
+    }
+    form input, form button {
+        font-size: 2rem;
+    }
+    .todo-list {
+        min-width: 100%;
+    }
+    .todo {
+        margin: 1.5rem 0;
+    }
+}
